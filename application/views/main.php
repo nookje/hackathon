@@ -7,7 +7,7 @@
         <!-- Basic Page Needs
         ================================================== -->
         <meta charset="utf-8">
-        <title>Robmet</title>
+        <title>Hackathon</title>
         
         <!-- Mobile Specific
         ================================================== -->
@@ -67,12 +67,6 @@
                 <!-- Header -->
                 <div id="header">
                     <!-- Logo -->
-                    <div class="eight columns">
-                        <div id="logo">
-                            <a href="/"><img src="/static/images/robmet_logo_web.png" alt="logo" /></a>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
                     <!-- Social / Contact -->
                     <div class="eight columns">
                     	<a href="?change_language=en"><img src="/static/images/en.png" style="float:right; "></a>
@@ -80,12 +74,6 @@
                     
                         <div class="clear"></div>
                         <!-- Contact Details -->
-                        <div id="contact-details">
-                            <ul>
-                                <li><i class="mini-ico-envelope"></i><a href="#">contact@robmet.ro</a></li>
-                                <li><i class="mini-ico-user"></i>+40 233 233 460</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <!-- Header / End -->
