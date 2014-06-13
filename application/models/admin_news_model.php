@@ -49,10 +49,9 @@ class Admin_news_model extends CI_Model {
 						
 			$this->db->where('id', $params['id']);
 			$this->db->update('news', $result);
-		}			
+		}
 		
 		if(isset($_FILES['poza']['tmp_name']) && $_FILES['poza']['tmp_name']) {
-
 			$upload_path = getcwd() . '/static/images/noutati/' . $params['id'] . '/';
 			$thumb_path = $upload_path . 'thumbnails/';
 

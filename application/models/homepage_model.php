@@ -10,7 +10,7 @@ class Homepage_model extends CI_Model
     
     public function display()
     {
-		$data['translations'] = $this->translations->get($page = 'homepage', $language = LANGUAGE);
+		$data['translations'] = 'aaa';
 		$this->load->view('homepage', $data);
     }
 	

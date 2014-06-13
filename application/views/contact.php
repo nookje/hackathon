@@ -40,8 +40,8 @@
 						</a>
 						<p class="nume-membru">ROXANA NISTOR</p>
 						<p class="pozitie-membru"><?= $translations[104] ?></p>
-						<p class="info">Mobil: 0040-784-272140</p>                        
-						<p class="info">nroxana.robmet@yahoo.com</p>                        
+						<p class="info">Mobil: 0040-745-984552</p>                        
+						<p class="info">croxana.robmet@yahoo.com</p>                        
 					</li>
 					<li>
 						<a  rel="image" href="/static/images/contact/raluca-gheghici-full.jpg"><div class="block"><img alt="" src="/static/images/contact/raluca-gheghici.jpg"></div>
@@ -60,12 +60,12 @@
 						<p class="info">gabriela.robmet@yahoo.com</p>                        
 					</li>
 					<li>
-						<a  rel="image" href="/static/images/contact/cristina-nicodim-full.jpg"><div class="block"><img alt="" src="/static/images/contact/cristina-nicodim.jpg"></div>
+						<a  rel="image" href="/static/images/contact/luiza-buruiana-full.jpg"><div class="block"><img alt="" src="/static/images/contact/luiza-buruiana.jpg"></div>
 						</a>
-						<p class="nume-membru">CRISTINA NICODIM</p>
+						<p class="nume-membru">LUIZA BURUIANA</p>
 						<p class="pozitie-membru"><?= $translations[104] ?></p>
-						<p class="info">Mobil: 0040-784272127</p>                        
-						<p class="info">ncristina.robmet@yahoo.com</p>                        
+						<p class="info">Mobil: 0040-784272124</p>                        
+						<p class="info">luizab.robmet@yahoo.ro</p>                        
 					</li>
 					<li>
 						<a  rel="image" href="/static/images/contact/marius-vaduva-full.jpg"><div class="block"><img alt="" src="/static/images/contact/marius-vaduva.jpg"></div>
@@ -96,15 +96,6 @@
 						<p class="info">aapetrei.robmet@yahoo.com</p>                        
 					</li>
 					
-					<li>
-						<a  rel="image" href="/static/images/contact/teodora-tarantus-full.jpg"><div class="block"><img alt="" src="/static/images/contact/teodora-tarantus.jpg"></div>
-						</a>
-						<p class="nume-membru">TEODORA TARANTUS</p>
-						<p class="pozitie-membru"><?= $translations[103] ?></p>
-						<p class="info">Mobil:0040-7469053291</p>
-						<p class="info">teodora.robmet@yahoo.ro</p>                        
-					</li>
-										
                     <div style="clear:both; height:10px;"></div>
 
 					<li>

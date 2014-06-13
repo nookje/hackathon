@@ -4,7 +4,6 @@ class Admin_news extends CI_Controller {
 
 	public function __construct()
 	{
-
 		parent::__construct();
 		$this->load->library('session');
 		if ($this->session->userdata('authorized') !== true) {
@@ -14,7 +13,7 @@ class Admin_news extends CI_Controller {
 
 	public function index()
 	{
-
+				
 		$this->load->model('admin_news_model', 'admin');
 		$data['body_model'] 	= $this->admin;		
 		$data['translations'] 	= $this->translations->get($page = 'main', $language = LANGUAGE);
@@ -139,6 +138,7 @@ class Admin_news extends CI_Controller {
 	
 	public function editeaza_noutate($id)
 	{
+	
 		$this->load->model('admin_news_model', 'admin');
 		$data['body_model'] 	= $this->admin;		
 		$data['translations'] 	= $this->translations->get($page = 'main', $language = LANGUAGE);

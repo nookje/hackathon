@@ -17,12 +17,12 @@ $hook['pre_controller'] = array(
                                 'filepath' => 'hooks',
                                 );
 
-$hook['display_override'] = array(
-                                'class'    => 'Postcontroller',
-                                'function' => 'execute',
-                                'filename' => 'Postcontroller.php',
-                                'filepath' => 'hooks',
-                                );
+// $hook['display_override'] = array(
+//                                 'class'    => 'Postcontroller',
+//                                 'function' => 'execute',
+//                                 'filename' => 'Postcontroller.php',
+//                                 'filepath' => 'hooks',
+//                                 );
 
 
 /* End of file hooks.php */
