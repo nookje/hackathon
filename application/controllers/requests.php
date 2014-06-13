@@ -10,8 +10,7 @@ class Requests extends CI_Controller {
 
 
 		$result = $this->requests->loadRequests();
-
-
+		header('Content-Type: application/json');
 		echo json_encode($result);
 	}
 
