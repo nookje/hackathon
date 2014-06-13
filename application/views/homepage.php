@@ -136,8 +136,10 @@
 			<li><img src="/static/images/furnizori/sigla1.png" alt=""/></li>
 			<li><img src="/static/images/furnizori/sigla2.png" alt=""/></li>
 			<li><img src="/static/images/furnizori/sigla3.png" alt=""/></li>
+			<!--
 			<li><img src="/static/images/furnizori/sigla4.png" alt=""/></li>
 			<li><img src="/static/images/furnizori/sigla5.png" alt=""/></li>
+			-->
 			<li><img src="/static/images/furnizori/sigla6.jpg" alt=""/></li>
 		</ul>
 

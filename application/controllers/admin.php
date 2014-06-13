@@ -18,6 +18,16 @@ class Admin extends CI_Controller {
 		$data['body_model'] 	= $this->admin;		
 		$data['translations'] 	= $this->translations->get($page = 'main', $language = LANGUAGE);
 		
+		$insert['title_ro'] 	= $this->input->post('title_ro', true);
+		$insert['title_en'] 	= $this->input->post('title_en', true);
+		
+		$insert['description_ro'] 	= $this->input->post('description_ro', true);
+		$insert['description_en'] 	= $this->input->post('description_en', true);
+		
+		$insert['code'] 		= $this->input->post('code', true);
+		$insert['category'] 	= $this->input->post('category', true);		
+
+		$data['result'] = $insert;		
 		$this->load->view('main', $data);
 	}
 	
@@ -115,6 +125,7 @@ class Admin extends CI_Controller {
 			
 				
 		}
+		$data['result'] = $insert;
 		$this->load->view('main', $data);
 	}
 	

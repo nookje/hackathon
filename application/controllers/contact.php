@@ -4,6 +4,7 @@ class Contact extends CI_Controller {
 
 	public function index()
 	{	
+
 		$this->load->helper('url');	
 		$this->load->model('contact_model', 'contact');		
 		$data['body_model'] 	= $this->contact;		
@@ -44,7 +45,7 @@ class Contact extends CI_Controller {
 				$this->load->library('email');
 				
 				$this->email->from($inputs['email'], $inputs['nume']);
-				$this->email->to('razvansg@yahoo.com');
+				$this->email->to('contact@robmet.ro');
 				$this->email->subject('Contact email');
 				$content = 	"Nume: " . $inputs['nume'] . "\n" 
 							. "Prenume: " . $inputs['prenume'] . "\n" 

@@ -17,13 +17,16 @@ class Despre_model extends CI_Model {
 		if ($handle = @opendir($path)) {
 			while (false !== ($file = readdir($handle))) {
 				if ($file != "." && $file != "..") {
-					$gallery[filemtime($path . $file) . '_'.  md5($file)] = $file;
+					$pathinfo = pathinfo($file);
+					$pathinfo = $pathinfo['basename'] * 1;
+					$gallery[$pathinfo] = $file;
 				}
 			}
 			closedir($handle);
 		}
 		
 		if (is_array($gallery)) {
+			krsort($gallery);
 			$data['company'] = $gallery;
 			$data['company_gallery_count'] = count($gallery);
 		}
@@ -34,13 +37,16 @@ class Despre_model extends CI_Model {
 		if ($handle = @opendir($path)) {
 			while (false !== ($file = readdir($handle))) {
 				if ($file != "." && $file != "..") {
-					$gallery[filemtime($path . $file) . '_'.  md5($file)] = $file;
+					$pathinfo = pathinfo($file);
+					$pathinfo = $pathinfo['basename'] * 1;
+					$gallery[$pathinfo] = $file;
 				}
 			}
 			closedir($handle);
 		}
 		
 		if (is_array($gallery)) {
+			krsort($gallery);		
 			$data['stocks'] = $gallery;
 			$data['stocks_gallery_count'] = count($gallery);			
 		}

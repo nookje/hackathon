@@ -60,6 +60,15 @@
 		}
 	?>
     <body id="<?= $page ?>">
+    
+	<!-- Start Alexa Certify Javascript -->
+	<script type="text/javascript">
+	_atrk_opts = { atrk_acct:"qYkMh1aIE7002T", domain:"robmet.ro",dynamic: true};
+	(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+	</script>
+	<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=qYkMh1aIE7002T" style="display:none" height="1" width="1" alt="" /></noscript>
+	<!-- End Alexa Certify Javascript -->
+    
         <!-- Wrapper Start -->
         <div id="wrapper">
             <!-- 960 Container -->
@@ -86,6 +95,11 @@
                                 <li><i class="mini-ico-user"></i>+40 233 233 460</li>
                             </ul>
                         </div>
+                        <div style="float:right; width:120px; margin:45px 20px 0 0px;">
+                        	<div style="float:right;"><a target="_blank" href="http://www.linkedin.com/company/sc-robmet-srl"><img src="/static/images/linkedin.png" border="0"></a></div>
+                            <div style="float:right; margin-right: 10px;"><a target="_blank" href="https://www.facebook.com/RobmetRomania"><img src="/static/images/facebook.png" border="0"></a></div>
+                        </div>
+                        
                     </div>
                 </div>
                 <!-- Header / End -->

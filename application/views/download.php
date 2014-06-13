@@ -74,13 +74,13 @@
 			<img src="/static/images/robmet_logo_web.png" style="width:150px;" /><br />
 
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 9001 .jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 9001 .jpg"></div></a>
+                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 9001-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[301] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 14001 .jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 14001 .jpg"></div></a>
+                <a title="<?= $translations[301] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 14001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICAT ISO 14001-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[302] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICATQEC ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICATQEC ISO 9001.jpg"></div></a>
+                <a title="<?= $translations[302] ?>" rel="image" href="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICATQEC ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/1.ROBMET/ROMANA/CERTIFICATQEC ISO 9001-small.jpg"></div></a>
             </div>
             
 			<div class="clear"></div>
@@ -88,16 +88,16 @@
             
 			<img src="/static/images/furnizori/sigla1.png" style="width:150px;" />
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/AUTORIZARE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/AUTORIZARE.jpg"></div></a>
+                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/AUTORIZARE_<?= LANGUAGE?>.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/AUTORIZARE_ro-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[304] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT API 6D.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT API 6D.jpg"></div></a>
+                <a title="<?= $translations[304] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT API 6D.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT API 6D-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT CE.jpg"></div></a>
+                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT CE-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT ISO 9001.jpg"></div></a>
+                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/2.ROMINSERV/ROMANA/CERTIFICAT ISO 9001-small.jpg"></div></a>
             </div>
             
             
@@ -106,17 +106,17 @@
             
             <img src="/static/images/furnizori/sigla2.png" style="width:150px;" />
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/AUTORIZARE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/AUTORIZARE.jpg"></div></a>
+                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/AUTORIZARE_<?= LANGUAGE?>.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/AUTORIZARE_ro-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT CE.jpg"></div></a>
+                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT CE-small.jpg"></div></a>
             
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[306] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT LLOYD.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT LLOYD.jpg"></div></a>
+                <a title="<?= $translations[306] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT LLOYD.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT LLOYD-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT ISO 9001.jpg"></div></a>
+                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/3.ZETKAMA/ROMANA/CERTIFICAT ISO 9001-small.jpg"></div></a>
             </div>
             
             
@@ -125,34 +125,35 @@
             
             <img src="/static/images/furnizori/sigla6.jpg" style="width:150px;" />
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/AUTORIZARE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/AUTORIZARE.jpg"></div></a>
+                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/AUTORIZARE_<?= LANGUAGE?>.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/AUTORIZARE_ro-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/CERTIFICAT ISO 9001.jpg"></div></a>
+                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/CERTIFICAT ISO 9001-small.jpg"></div></a>
             
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[307] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/DECLARATIE DE CONFORMITATE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/DECLARATIE DE CONFORMITATE.jpg"></div></a>
+                <a title="<?= $translations[307] ?>" rel="image" href="/static/images/download/certificari/4.CENTORK/ROMANA/DECLARATIE DE CONFORMITATE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/4.CENTORK/ROMANA/DECLARATIE DE CONFORMITATE-small.jpg"></div></a>
             </div>
             
+            <!--
 			<div class="clear"></div>
 			<div style="border-bottom:1px solid #E1E1E1; height:5px;"></div>
 
             <img src="/static/images/furnizori/sigla4.png" style="width:150px;" />
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/AUTORIZARE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/AUTORIZARE.jpg"></div></a>
+                <a title="<?= $translations[303] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/AUTORIZARE_<?= LANGUAGE?>.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/AUTORIZARE_ro-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT CE.jpg"></div></a>
+                <a title="<?= $translations[305] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT CE.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT CE-small.jpg"></div></a>
             
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[306] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT LLOYD.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT LLOYD.jpg"></div></a>
+                <a title="<?= $translations[306] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT LLOYD.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT LLOYD-small.jpg"></div></a>
             </div>
             <div style="float: left; margin-right: 22px; margin-bottom: 20px;">
-                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT ISO 9001.jpg"></div></a>
+                <a title="<?= $translations[300] ?>" rel="image" href="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT ISO 9001.jpg" ><div style="width:100px; height:141px;"><img style="width:100px;" alt="" src="/static/images/download/certificari/5.EVK/ROMANA/CERTIFICAT ISO 9001-small.jpg"></div></a>
             </div>
-            
+            -->
             
 			<div class="clear"></div>
             
@@ -161,4 +162,3 @@
 </div>
 
 <br><br>
-

@@ -27,10 +27,17 @@ class Postcontroller
 				<meta name=\"keywords\" content=\"" . $GLOBALS['META_KEYWORDS'] . "\" />
 			";
         } else {
-	    	$replace = "<title>Robineti industriali, armaturi. Distribuitor hidranti subterani, armaturi industriale, robineti Bolder Valve</title>
-                    <meta name=\"title\" content=\"Robineti industriali, armaturi. Distribuitor hidranti subterani, armaturi industriale, robineti Bolder Valve\" />                                 
-                    <meta name=\"description\" content=\"Robineti industriali, armaturi. Distribuitor hidranti subterani, armaturi industriale, robineti Bolder Valve\" />
-         			";        
+        	if (LANGUAGE == 'ro') {
+		    	$replace = "<title>Robmet - robineti,robinete,vane,armaturi,hidranti,actionari,supape</title>
+	                    <meta name=\"title\" content=\"Robmet - robineti,robinete,vane,armaturi,hidranti,actionari,supape\" />                                 
+	                    <meta name=\"description\" content=\"Robmet - robineti,robinete,vane,armaturi,hidranti,actionari,supape\" />
+	         			";     
+         	} else {
+		    	$replace = "<title>Robmet - industrial valves,hydrants,actuators,water and steam equipment</title>
+	                    <meta name=\"title\" content=\"Robmet - industrial valves,hydrants,actuators,water and steam equipment\" />                                 
+	                    <meta name=\"description\" content=\"Robmet - industrial valves,hydrants,actuators,water and steam equipment\" />
+	         			";              	
+         	}   
         }
         
         $html = preg_replace('/<title>Robmet<\/title>/', $replace, $html, 1);
