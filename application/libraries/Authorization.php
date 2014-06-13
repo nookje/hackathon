@@ -3,24 +3,26 @@
 class Authorization
 {
     private $ci = null;
-	private $login_email = 'catalin@robmet.ro';
-	private $password = 'ea2e346423cdb1beae1b31f0cb2d1cea';
-	
+	private $password = 'hackathon';
+
     public function __construct()
     {
         $this->ci =& get_instance();
         $this->ci->load->library('session');
     }
 
-	public function login($email, $password)
+	public function login($email, $role, $password)
 	{
-		if ($email !== $this->login_email || $password !== $this->password ) {
+		if (!$email || !$role || $password !== $this->password) {
 			return false;
 		}
 		
-		
 		$result['authorized'] = true;
+		$result['email'] = $email;
+		$result['role'] = $role;
         $this->ci->session->set_userdata($result);	
+
+        return $result;
 	}
 
 	public function logout()
@@ -36,5 +38,13 @@ class Authorization
 	public function set_session_item($key, $value)
 	{
 		return $this->ci->session->set_userdata($key, $value);	
+	}
+
+	public function get_all_session_items()
+	{
+		return array('authorized' => $this->session_item('authorized'),
+					'email' => $this->session_item('email'),
+					'role' => $this->session_item('role'),
+		);
 	}
 }
