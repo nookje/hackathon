@@ -15,7 +15,7 @@
                       <!-- Past items -->
                       <div class="list-group">
 
-                        <a href="/index.php/frontend/requests/view/<?= $val['id'] ?>" class="list-group-item list-group-item-warning clearfix">
+                        <a href="/index.php/frontend/requests/view/<?= $val['id'] ?>" class="list-group-item list-group-item-<?php if ($val['status'] == 'request') { ?>info<?php } else { ?>warning<?php } ?> clearfix">
                           <span class="item-user"><?= substr($val['requester'], 0, strpos($val['requester'], '@')); ?></span>
                           <span class="item-location"><?= $val['location'] ?></span>
 
@@ -24,54 +24,12 @@
                             <?= $val['description'] ?>
                           </p>
                           <span class="item-status">
-                            <span class="btn btn-success"><?= $val['status'] ?></span>
+                            <span class="btn btn-<?php if ($val['status'] == 'delivered') { ?>success<?php } elseif ($val['status'] == 'canceled') { ?>danger<?php } else { ?>warning<?php } ?>"><?= $val['status'] ?></span>
                           </span>
 
                         </a>
                       </div>
                     <?php } ?>
-
-                    <!-- Current items -->
-                    <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-info clearfix">
-                        <span class="item-user">Razvan Smarandeanu</span>
-                        <span class="item-location">Timisoara</span>
-
-                        <h4 class="list-group-item-heading">15 Jun 2014</h4>
-                        <p class="list-group-item-text">Notebook &amp; Pen</p>
-                        <span class="item-status">
-                          <span class="btn btn-primary">Incoming</span>
-                        </span>
-                      </a>
-                    </div>
-
-                    <!-- Future items -->
-                    <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-warning clearfix">
-                        <span class="item-user">Marius Fanu</span>
-                        <span class="item-location">Timisoara</span>
-
-                        <h4 class="list-group-item-heading">30 Jun 2014</h4>
-                        <p class="list-group-item-text">Dell UltraSharp Pro 24"</p>
-                        <span class="item-status">
-                          <span class="btn btn-warning">Ordered</span>
-                        </span>
-
-                      </a>
-
-                      <a href="#" class="list-group-item list-group-item-warning clearfix">
-                        <span class="item-user">Crisitian Sitov</span>
-                        <span class="item-location">Timisoara</span>
-
-                        <h4 class="list-group-item-heading">05 Iul 2014</h4>
-                        <p class="list-group-item-text">Apple Thunderbolt to Gigabit Lan Adapter</p>
-                        <span class="item-status">
-                          <span class="btn btn-warning">Ordered</span>
-                        </span>
-
-                      </a>
-                    </div>
-
 
                   </div>
                 </div>
