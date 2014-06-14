@@ -13,7 +13,7 @@ class Frontendrequests_model extends CI_Model {
             return $this->$params['function']($params);
         } else {
             $data       = array();
-            $this->load->view('login', $data);
+            $this->load->view('requests', $data);
         }
     }
 
