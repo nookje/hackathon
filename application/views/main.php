@@ -69,5 +69,7 @@
     <script src="/static/js/flatui-radio.js"></script>
     <script src="/static/js/jquery.tagsinput.js"></script>
     <script src="/static/js/jquery.placeholder.js"></script>
+
+    <script src="/static/js/application.js"></script>
   </body>
 </html>
