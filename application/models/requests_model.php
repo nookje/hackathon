@@ -156,7 +156,26 @@ class Requests_model extends CI_Model {
     		return;
     	}
 
-    	return $this->get($id);
+    	$request = $this->get($id);
+
+		$this->load->model('suppliers_model', 'suppliers');		
+		$suppliers = $this->suppliers->getSuppliersByType($request['supplier_type']);
+
+		$data['request_id'] = $id;
+
+		foreach ($suppliers as $val) {
+
+			$hash = md5($val['name'] . microtime() . rand(1,999999));
+			$data = array(
+			   'request_id' 	=> $id,
+			   'provider' 		=> $val['name'] ,
+			   'status' 		=> 'unopened',
+			   'hash' 			=> $hash,
+			);
+			$insert_query = $this->db->insert_string('offers', $data);
+			$insert_query = str_replace('INSERT INTO','INSERT IGNORE INTO',$insert_query);
+			$this->db->query($insert_query); 
+		}
     }
 
 
