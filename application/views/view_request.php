@@ -14,6 +14,14 @@
 
                       <form role="form">
                         <div class="form-group">
+                          <label for="status">Supplier</label>
+                          <select name='info' class="select-block">
+                            <option>emag.ro</option>
+                            <option>Stas Computer</option>
+                            <option>Flanco</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
                           <label for="status">Status</label>
                           <select name='info' class="select-block">
                             <option>Ordered</option>
@@ -55,9 +63,62 @@
                           <button class="btn btn-primary btn-wide">
                             Edit Request
                           </button>
+
+                          <button class="btn btn-primary btn-wide">
+                            Send Offer Request
+                          </button>
                         </div>
                       </form>
 
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                      <h4>Available Offers</h4>
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Supplier</th>
+                            <th>Price</th>
+                            <th>Delivery Date</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td><a href="#">emag.ro</a></td>
+                            <td>250ron</td>
+                            <td>30 Jul 2014</td>
+                            <td>
+                              <a href="#" class="btn btn-sm btn-success">Accept</a>
+                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td><a href="#">Stas Computer</a></td>
+                            <td>260ron</td>
+                            <td>10 Jul 2014</td>
+                            <td>
+                              <a href="#" class="btn btn-sm btn-success">Accept</a>
+                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td><a href="#">Flanco</a></td>
+                            <td>20ron</td>
+                            <td>5 Aug 2014</td>
+                            <td>
+                              <a href="#" class="btn btn-sm btn-success">Accept</a>
+                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
 
