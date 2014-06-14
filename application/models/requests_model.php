@@ -129,14 +129,14 @@ class Requests_model extends CI_Model {
     		return;
     	}
 
-		$description	= $this->input->get('description', true);
-		$link 			= $this->input->get('link', true);
-		$urgency 		= $this->input->get('urgency', true);
-		$supplier 		= $this->input->get('supplier', true);
-		$delivery_date 	= $this->input->get('delivery_date', true);
-		$location 		= $this->input->get('location', true);
-		$supplier_type 	= $this->input->get('supplier_type', true);
-		$status 		= $this->input->get('status', true);
+		$description	= $this->input->post('description', true);
+		$link 			= $this->input->post('link', true);
+		$urgency 		= $this->input->post('urgency', true);
+		$supplier 		= $this->input->post('supplier', true);
+		$delivery_date 	= $this->input->post('delivery_date', true);
+		$location 		= $this->input->post('location', true);
+		$supplier_type 	= $this->input->post('supplier_type', true);
+		$status 		= $this->input->post('status', true);
 
 		$data = array(
 		   'description' 	=> $description,
