@@ -25,21 +25,22 @@ class Offers_model extends CI_Model {
 	}
 
 
-   	public function send($hash) 
+   	public function respond($hash) 
 	{
+		$offer = $this->get($hash);
+
+		$this->load->model('suppliers_model', 'suppliers');		
+		$supplier = $this->suppliers->getSupplierByName($offer['supplier']);
 
 		$this->load->library('email');
 
-		$this->email->from('your@example.com', 'Your Name');
+		$this->email->from($supplier['email'], $supplier['name']);
 		$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
 
-		$this->email->subject('Email Test');
-		$this->email->message('Testing the email class.');	
+		$this->email->subject("{$supplier['name']} has responded to your request");
+		$this->email->message("Check the offer from {$supplier['name']}. The total price is {$offer['price']} delivered on {$offer['delivery']}");	
 
 		$this->email->send();
-
-		echo $this->email->print_debugger();
-
 
 		$price		= $this->input->get('price', true);
 		$delivery 	= $this->input->get('delivery', true);

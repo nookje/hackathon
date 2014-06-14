@@ -26,7 +26,10 @@ $config['base_url'] = "http://{$_SERVER['SERVER_NAME']}/";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
+
+
+$config['complete_base_url'] = $config['base_url'] . $config['index_page'];
 
 /*
 |--------------------------------------------------------------------------

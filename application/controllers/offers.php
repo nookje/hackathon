@@ -19,11 +19,11 @@ class Offers extends CI_Controller {
 	}
 
 
-	public function send($hash)
+	public function respond($hash)
 	{
 		$this->load->model('offers_model', 'offers');		
 
-		$this->offers->send($hash);
+		$this->offers->respond($hash);
 		$result = $this->offers->get($hash);
 
 		header('Content-Type: application/json');

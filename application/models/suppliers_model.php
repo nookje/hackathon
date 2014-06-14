@@ -21,4 +21,19 @@ class Suppliers_model extends CI_Model {
     }
 
 
+    function getSupplierByName($name)
+    {
+		$q = "	SELECT * 
+				FROM suppliers
+				WHERE name = '{$name}'
+				LIMIT 1
+		";
+    
+		$query = $this->db->query($q);
+		
+		$result = $query->row_array();
+		return $result;
+    }
+
+
 }

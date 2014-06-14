@@ -152,6 +152,7 @@ class Requests_model extends CI_Model {
 
     public function sendRequestOffer($id)
     {
+
     	if ($this->authorization->session_item('role') !== 'administrator') {
     		return;
     	}
@@ -163,8 +164,13 @@ class Requests_model extends CI_Model {
 
 		$data['request_id'] = $id;
 
-		foreach ($suppliers as $val) {
+		$this->load->library('email');
 
+		$email = $this->authorization->session_item('email');
+		$parts = explode('@', $email);
+		$name = $parts[0];
+
+		foreach ($suppliers as $val) {
 			$hash = md5($val['name'] . microtime() . rand(1,999999));
 			$data = array(
 			   'request_id' 	=> $id,
@@ -175,6 +181,15 @@ class Requests_model extends CI_Model {
 			$insert_query = $this->db->insert_string('offers', $data);
 			$insert_query = str_replace('INSERT INTO','INSERT IGNORE INTO',$insert_query);
 			$this->db->query($insert_query); 
+
+			// send email
+			$this->email->from($email, $name);
+			$this->email->to($val['email']); 
+
+			$this->email->subject("{$name} has sent you an offer request");
+			$this->email->message("Click the link bellow to respond to the request: {$this->config->item('complete_base_url')}/offers/show/{$hash}");	
+
+			$this->email->send();
 		}
 
 		$data = array(
