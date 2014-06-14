@@ -22,7 +22,7 @@ class Login extends CI_Controller {
 				$result['authorized'] = false;
 			}
 		}
-
+		header('Content-Type: application/json');
 		echo json_encode($result);
 		return;
 	}

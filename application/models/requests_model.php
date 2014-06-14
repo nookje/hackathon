@@ -36,6 +36,12 @@ class Requests_model extends CI_Model {
     		$condition .= " AND location = '{$location}' ";
     	}
 
+		$email = $this->authorization->session_item('email');	
+
+    	if ($this->authorization->session_item('role') !== 'administrator') {
+    		$condition .= " AND requester = '{$email}' ";
+    	}
+
     	if ($direction && $reference && $id) {
     		if ($direction == '<') {
     			$order = 'DESC';
@@ -84,5 +90,79 @@ class Requests_model extends CI_Model {
     	}
 
 		return $result;
+    }
+
+
+    public function addRequest()
+    {
+    	if ($this->authorization->session_item('authorized') !== true) {
+    		return;
+    	}
+
+		$description	= $this->input->get('description', true);
+		$link 			= $this->input->get('link', true);
+		$urgency 		= $this->input->get('urgency', true);
+
+		$date = date('Y-m-d H:i:s');
+
+		$data = array(
+		   'description' 	=> $description,
+		   'link' 			=> $link ,
+		   'urgency' 		=> $urgency,
+		   'requester' 		=> $this->authorization->session_item('email'),
+		   'status' 		=> 'request',
+		   'date'			=> $date,
+		   'delivery_date'	=> $date,
+		);
+
+		$this->db->insert('requests', $data); 
+    }
+
+
+    public function editRequest($id)
+    {
+    	if ($this->authorization->session_item('role') !== 'administrator') {
+    		return;
+    	}
+
+		$description	= $this->input->get('description', true);
+		$link 			= $this->input->get('link', true);
+		$urgency 		= $this->input->get('urgency', true);
+		$supplier 		= $this->input->get('supplier', true);
+		$delivery_date 	= $this->input->get('delivery_date', true);
+		$location 		= $this->input->get('location', true);
+		$supplier_type 	= $this->input->get('supplier_type', true);
+		$status 		= $this->input->get('status', true);
+
+		$data = array(
+		   'description' 	=> $description,
+		   'link' 			=> $link ,
+		   'urgency' 		=> $urgency,
+		   'supplier'	=> $supplier,
+		   'delivery_date'	=> $delivery_date,
+		   'status' 		=> $status,
+		   'supplier_type'	=> $supplier_type,
+		   'location'	=> $location,
+		);
+
+		$this->db->where('id', $id);
+		$this->db->update('requests', $data); 
+    }
+
+
+    public function sendRequestOffer($id)
+    {
+    	if ($this->authorization->session_item('role') !== 'administrator') {
+    		return;
+    	}
+
+    	return $this->get($id);
+    }
+
+
+    public function get($id) 
+    {
+		$query = $this->db->get_where('requests', array('id' => $id));
+		return $query->row_array();
     }
 }
