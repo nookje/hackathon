@@ -24,7 +24,7 @@
   width: 236px;
 }
 .demo-logo small {
-  color: rgba(52, 73, 94, 0.30000000000000004);
+  color: rgba(52, 73, 94, 0.3);
   display: block;
   font-size: 22px;
   font-weight: 700;
@@ -126,10 +126,8 @@
 .demo-illustrations .demo-content:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .demo-illustrations .demo-content:after {
   clear: both;
