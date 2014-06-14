@@ -50,7 +50,7 @@ class Requests_model extends CI_Model {
     			$order = 'ASC';
     		}
 
-			$q = "	SELECT delivery_date 
+			$q = "	SELECT * 
 					FROM requests
 					WHERE delivery_date {$direction}= '{$reference}' 
 					AND id != {$id}
@@ -64,7 +64,7 @@ class Requests_model extends CI_Model {
 			$result = $query->result_array();
 
     	} else {
-			$q = "	SELECT * FROM (SELECT delivery_date 
+			$q = "	SELECT * FROM (SELECT * 
 				FROM requests
 				WHERE delivery_date < now()
 				{$condition}
@@ -75,7 +75,7 @@ class Requests_model extends CI_Model {
 			$query = $this->db->query($q);
 			$result1 = $query->result_array();
 
-			$q = "	SELECT delivery_date 
+			$q = "	SELECT * 
 				FROM requests
 				WHERE delivery_date >= now()
 				{$condition}
