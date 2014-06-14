@@ -11,4 +11,15 @@ class Requests extends CI_Controller {
         $this->load->view('main', $data);
     }
 
+
+    public function view($id)
+    {
+        $this->load->model('frontendrequests_model', 'frontendrequests');
+        $data['body_model']     = $this->frontendrequests;
+        $data['pass_along']['function'] = __FUNCTION__;
+        $data['pass_along']['id'] = $id;
+
+        $this->load->view('main', $data);
+    }    
+
 }

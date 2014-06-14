@@ -7,11 +7,28 @@ class Frontendrequests_model extends CI_Model {
         parent::__construct();
     }
 
-    function display()
+    function display($params)
     {
-        $data       = array();
-        $this->load->view('requests', $data);
+        if (isset($params['function']) && method_exists(__CLASS__, $params['function'])) {
+            return $this->$params['function']($params);
+        } else {
+            $data       = array();
+            $this->load->view('login', $data);
+        }
     }
+
+
+    function view($params)
+    {
+		$this->load->model('requests_model', 'requests');		
+		$request = $this->requests->get($params['id']);
+
+    	$data = array();
+    	$data['request'] = $request;
+
+        $this->load->view('view_request', $data);
+    }
+
 
 
 }

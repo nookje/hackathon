@@ -36,7 +36,6 @@ class Login extends CI_Controller {
 	{
 		$this->authorization->logout();
 		custom_redirect('login');
-
 	}
 	
 }
