@@ -9,7 +9,7 @@ class Users_model extends CI_Model {
     
     function getTopUsers()
     {
-		$q = "	SELECT requester, sum(price) AS total, count(1) AS cnt 
+		$q = "	SELECT requester AS name, sum(price) AS total, count(1) AS cnt 
 				FROM `requests` GROUP BY requester ORDER BY sum(price) DESC LIMIT 5
 		";
     
@@ -33,7 +33,7 @@ class Users_model extends CI_Model {
     
     function getTopLocations()
     {
-		$q = "	SELECT location, sum(price) AS total, count(1) AS cnt 
+		$q = "	SELECT location AS name, sum(price) AS total, count(1) AS cnt 
 				FROM `requests` GROUP BY location ORDER BY sum(price) DESC LIMIT 5
 		";
     
@@ -59,11 +59,11 @@ class Users_model extends CI_Model {
     function getTotalPerMonth()
     {
 
-
-		$q = "	SELECT DATE_FORMAT(delivery_date, '%Y-%m') as dd, sum(price) as total, count(1) as cnt
+		$q = "	SELECT DATE_FORMAT(delivery_date, '%Y-%m') as name, sum(price) as total, count(1) as cnt
 				FROM `requests`
 				WHERE DATE_FORMAT(delivery_date, '%Y-%m') > DATE_FORMAT(DATE_SUB(now(), INTERVAL 6 MONTH), '%Y-%m')
-				GROUP BY dd
+				GROUP BY name
+				ORDER BY NAME DESC
 		";
     
 		$query = $this->db->query($q);
