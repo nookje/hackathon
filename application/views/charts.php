@@ -18,8 +18,9 @@
 		foreach ($top as $val) { ?>
 
 			<div>
-				<?= $val['name'] ?>
-				<br>
+				<div style="float: left; width: 300px;"><?= ($type == 'per month') ? date_format(date_create($val['name']), 'F Y') : ($val['name']); ?></div>
+				<div style="float: right; width: 100px; text-align: right;"><?= $val['cnt'] ?> requests</div>
+				<div style="clear: both"></div>
 				<div class="progress">
 					<div class="progress-bar" style=" width: <?= $temp = ($val['total'] / $max) * 100 ?>% ; text-align: center; font-size:12px; color: #fff;
 
