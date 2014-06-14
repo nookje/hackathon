@@ -9,11 +9,12 @@
 
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1">
+                      <div id="test"></div>
 
-                      <form role="form">
+                      <form role="form" method="post" action="/requests/edit/" id="editForm" data-request-id="<?= $request['id'] ?>">
                         <div class="form-group">
                           <label for="status">Supplier</label>
-                          <select name='info' class="select-block">
+                          <select name='supplier' data-select-type='info' class="select-block">
                             <option value="emag"<? echo $request['supplier'] == 'emag' ? ' selected' : ''?>>emag.ro</option>
                             <option value="stasonline"<? echo $request['supplier'] == 'stasonline' ? ' selected' : ''?>>Stas Computer</option>
                             <option value="flanco"<? echo $request['supplier'] == 'flanco' ? ' selected' : ''?>>Flanco</option>
@@ -21,7 +22,7 @@
                         </div>
                         <div class="form-group">
                           <label for="status">Status</label>
-                          <select name='info' class="select-block">
+                          <select name='status' data-select-type='info' class="select-block">
                             <option value="ordered"<? echo $request['status'] == 'ordered' ? ' selected' : ''?>>Ordered</option>
                             <option value="delivered"<? echo $request['status'] == 'delivered' ? ' selected' : ''?>>Delivered</option>
                             <option value="undelivered"<? echo $request['status'] == 'undelivered' ? ' selected' : ''?>>Undelivered</option>
@@ -32,14 +33,14 @@
                         </div>
                         <div class="form-group">
                           <label for="location">Location</label>
-                          <select name='info' class="select-block">
+                          <select name='location' data-select-type='info' class="select-block">
                             <option>Timisoara</option>
                             <option>Oradea</option>
                           </select>
                         </div>
                         <div class="form-group">
-                          <label for="providerTypes">Provider Type</label>
-                          <select name='info' class="select-block mbl">
+                          <label for="providerTypes">Supplier Type</label>
+                          <select name='supplier_type' data-select-type='info' class="select-block mbl">
                             <option value="it&c"<? echo $request['supplier_type'] == 'it&c' ? ' selected' : ''?>>IT&amp;C</option>
                             <option value="food"<? echo $request['supplier_type'] == 'food' ? ' selected' : ''?>>Food</option>
                             <option value="service"<? echo $request['supplier_type'] == 'service' ? ' selected' : ''?>>Service</option>
@@ -47,15 +48,15 @@
                         </div>
                         <div class="form-group">
                           <label for="description">Description</label>
-                          <textarea class="form-control" rows="3" id="description"><?= $request['description'] ?></textarea>
+                          <textarea class="form-control" name="description" rows="3" id="description"><?= $request['description'] ?></textarea>
                         </div>
                         <div class="form-group">
                           <label for="deliveryDate">Delivery Date</label>
-                          <input type="text" class="form-control" id="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>">
+                          <input type="text" class="form-control" id="deliveryDate" name="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>">
                         </div>
                         <div class="form-group">
                           <label for="link">Link</label>
-                          <input type="text" class="form-control" id="link" placeholder="link" value="<?= $request['link'] ?>">
+                          <input type="text" class="form-control" id="link" placeholder="link" name="link" value="<?= $request['link'] ?>">
                         </div>
 
                         <div class="form-group">

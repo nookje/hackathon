@@ -54,12 +54,13 @@
             </div>
         </div>
 
+      </div>
     </div>
     <!-- /.container -->
 
 
     <!-- Load JS here for greater good =============================-->
-    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
     <script src="/static/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="/static/js/jquery.ui.touch-punch.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
@@ -71,5 +72,6 @@
     <script src="/static/js/jquery.placeholder.js"></script>
 
     <script src="/static/js/application.js"></script>
+    <script src="/static/js/wishly.js"></script>
   </body>
 </html>
