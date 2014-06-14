@@ -15,7 +15,7 @@
                       <!-- Past items -->
                       <div class="list-group">
 
-                        <a href="#" class="list-group-item list-group-item-warning clearfix">
+                        <a href="/index.php/frontend/requests/view/<?= $val['id'] ?>" class="list-group-item list-group-item-warning clearfix">
                           <span class="item-user"><?= substr($val['requester'], 0, strpos($val['requester'], '@')); ?></span>
                           <span class="item-location"><?= $val['location'] ?></span>
 
