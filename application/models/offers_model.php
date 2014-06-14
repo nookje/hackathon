@@ -88,4 +88,10 @@ class Offers_model extends CI_Model {
 		$this->db->update('offers', $data); 
 	}
 
+    public function getOffersByRequestId($request_id) 
+    {
+		$query = $this->db->get_where('offers', array('request_id' => $request_id));
+		return $query->result_array();
+    }
+
 }

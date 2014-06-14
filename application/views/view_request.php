@@ -87,36 +87,31 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td><a href="#">emag.ro</a></td>
-                            <td>250ron</td>
-                            <td>30 Jul 2014</td>
-                            <td>
-                              <a href="#" class="btn btn-sm btn-success">Accept</a>
-                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td><a href="#">Stas Computer</a></td>
-                            <td>260ron</td>
-                            <td>10 Jul 2014</td>
-                            <td>
-                              <a href="#" class="btn btn-sm btn-success">Accept</a>
-                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td><a href="#">Flanco</a></td>
-                            <td>20ron</td>
-                            <td>5 Aug 2014</td>
-                            <td>
-                              <a href="#" class="btn btn-sm btn-success">Accept</a>
-                              <a href="#" class="btn btn-sm btn-danger">Reject</a>
-                            </td>
-                          </tr>
+
+                          <?php $i = 0; foreach ($offers as $val) { $i++;?>
+
+                            <tr>
+                              <td><?= $i ?></td>
+                              <td><a href="#"><?= $val['supplier'] ?></a></td>
+                              <td><?= $val['price'] ?></td>
+                              <td>
+                                <?php if ($val['status'] == 'accepted') { ?>
+                                  <?= date_format(date_create($val['delivery']), 'jS F Y') ?>
+                                <?php } ?>
+                              </td>
+                              <td>
+                                <?php if ($val['status'] == 'accepted') { ?>
+                                <a href="#" class="btn btn-sm btn-success">Accept</a>
+                                <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                <?php } elseif ($val['status'] == 'unopened') { ?>
+                                  <button class="btn btn-default"><?= $val['status'] ?></button>
+                                <?php } else { ?>
+                                  <button class="btn btn-info"><?= $val['status'] ?></button>
+                                <?php } ?>
+                              </td>
+                            </tr>
+                          <?php } ?>
+
                         </tbody>
                       </table>
                     </div>

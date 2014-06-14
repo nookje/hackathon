@@ -31,6 +31,11 @@ class Frontendrequests_model extends CI_Model {
     	$data = array();
     	$data['request'] = $request;
 
+        $this->load->model('offers_model', 'offers');       
+        $offers = $this->offers->getOffersByRequestId($params['id']);
+
+        $data['offers'] = $offers;
+
         $this->load->view('view_request', $data);
     }
 
