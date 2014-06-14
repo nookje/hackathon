@@ -1,5 +1,3 @@
-<!-- <h3><?= $request['description'] ?></h3> -->
-
                 <nav class="navbar navbar-inverse" role="navigation">
                   <div class="navbar-header">
                     <div class="navbar-brand" href="#">Edit Request</div>
@@ -16,19 +14,20 @@
                         <div class="form-group">
                           <label for="status">Supplier</label>
                           <select name='info' class="select-block">
-                            <option>emag.ro</option>
-                            <option>Stas Computer</option>
-                            <option>Flanco</option>
+                            <option value="emag"<? echo $request['supplier'] == 'emag' ? ' selected' : ''?>>emag.ro</option>
+                            <option value="stasonline"<? echo $request['supplier'] == 'stasonline' ? ' selected' : ''?>>Stas Computer</option>
+                            <option value="flanco"<? echo $request['supplier'] == 'flanco' ? ' selected' : ''?>>Flanco</option>
                           </select>
                         </div>
                         <div class="form-group">
                           <label for="status">Status</label>
                           <select name='info' class="select-block">
-                            <option>Ordered</option>
-                            <option>Delivered</option>
-                            <option>Undelivered</option>
-                            <option>Canceled</option>
-                            <option>Request</option>
+                            <option value="ordered"<? echo $request['status'] == 'ordered' ? ' selected' : ''?>>Ordered</option>
+                            <option value="delivered"<? echo $request['status'] == 'delivered' ? ' selected' : ''?>>Delivered</option>
+                            <option value="undelivered"<? echo $request['status'] == 'undelivered' ? ' selected' : ''?>>Undelivered</option>
+                            <option value="canceled"<? echo $request['status'] == 'canceled' ? ' selected' : ''?>>Canceled</option>
+                            <option value="request"<? echo $request['status'] == 'request' ? ' selected' : ''?>>Request</option>
+                            <option value="pending"<? echo $request['status'] == 'pending' ? ' selected' : ''?>>Pending</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -41,22 +40,22 @@
                         <div class="form-group">
                           <label for="providerTypes">Provider Type</label>
                           <select name='info' class="select-block mbl">
-                            <option>IT&amp;C</option>
-                            <option>Food</option>
-                            <option>Service</option>
+                            <option value="it&c"<? echo $request['supplier_type'] == 'it&c' ? ' selected' : ''?>>IT&amp;C</option>
+                            <option value="food"<? echo $request['supplier_type'] == 'food' ? ' selected' : ''?>>Food</option>
+                            <option value="service"<? echo $request['supplier_type'] == 'service' ? ' selected' : ''?>>Service</option>
                           </select>
                         </div>
                         <div class="form-group">
                           <label for="description">Description</label>
-                          <textarea class="form-control" rows="3" id="description"></textarea>
+                          <textarea class="form-control" rows="3" id="description"><?= $request['description'] ?></textarea>
                         </div>
                         <div class="form-group">
                           <label for="deliveryDate">Delivery Date</label>
-                          <input type="text" class="form-control" id="deliveryDate" placeholder="Delivery Date">
+                          <input type="text" class="form-control" id="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>">
                         </div>
                         <div class="form-group">
                           <label for="link">Link</label>
-                          <input type="text" class="form-control" id="link" placeholder="link">
+                          <input type="text" class="form-control" id="link" placeholder="link" value="<?= $request['link'] ?>">
                         </div>
 
                         <div class="form-group">
