@@ -15,7 +15,6 @@ curl -X POST \
         ],
         "data": {
           "alert": "' . $notification . '",
-          "badge": "Increment",
           "sound": "cheering.caf",
           "title": "Mets Score!"
         }

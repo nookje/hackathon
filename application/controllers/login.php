@@ -7,7 +7,7 @@ class Login extends CI_Controller {
 
  
 
-		send_push_notification('logged in bo$$');
+		// send_push_notification('logged in bo$$');
 
 		if (count($_GET)) {
 			$email 		= $this->input->get('email', true);
