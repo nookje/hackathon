@@ -116,6 +116,10 @@ class Requests_model extends CI_Model {
 		);
 
 		$this->db->insert('requests', $data); 
+
+		$parts = explode('@', $this->authorization->session_item('email'));
+		$push_notification_message = $parts[0] . " has made a request!";
+		send_push_notification($push_notification_message);
     }
 
 
@@ -138,11 +142,11 @@ class Requests_model extends CI_Model {
 		   'description' 	=> $description,
 		   'link' 			=> $link ,
 		   'urgency' 		=> $urgency,
-		   'supplier'	=> $supplier,
+		   'supplier'		=> $supplier,
 		   'delivery_date'	=> $delivery_date,
 		   'status' 		=> $status,
 		   'supplier_type'	=> $supplier_type,
-		   'location'	=> $location,
+		   'location'		=> $location,
 		);
 
 		$this->db->where('id', $id);
@@ -159,6 +163,10 @@ class Requests_model extends CI_Model {
 
     	$request = $this->get($id);
 
+    	if ($request['status'] !== 'request') {
+    		return;
+    	} 
+    	
 		$this->load->model('suppliers_model', 'suppliers');		
 		$suppliers = $this->suppliers->getSuppliersByType($request['supplier_type']);
 

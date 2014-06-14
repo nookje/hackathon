@@ -32,21 +32,11 @@ class Offers_model extends CI_Model {
 		$this->load->model('suppliers_model', 'suppliers');		
 		$supplier = $this->suppliers->getSupplierByName($offer['supplier']);
 
-		$this->load->library('email');
-
-		$this->email->from($supplier['email'], $supplier['name']);
-		$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
-
-		$this->email->subject("{$supplier['name']} has responded to your request");
-		$this->email->message("Check the offer from {$supplier['name']}. The total price is {$offer['price']} delivered on {$offer['delivery']}");	
-
-		$this->email->send();
-
 		$price		= $this->input->get('price', true);
 		$delivery 	= $this->input->get('delivery', true);
 		$status 	= $this->input->get('status', true);
 
-		if (!$price || !$delivery) {
+		if (!$price || !$delivery || !$status) {
 			return;
 		}
 
@@ -58,6 +48,24 @@ class Offers_model extends CI_Model {
 
 		$this->db->where('hash', $hash)->where('status', 'opened');
 		$this->db->update('offers', $data); 
+
+		if ($status == 'accepted') {
+
+			$this->load->library('email');
+
+			$this->email->from($supplier['email'], $supplier['name']);
+			$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
+
+			$this->email->subject("{$supplier['name']} has sent you an offer");
+			$this->email->message("Check the offer from {$supplier['name']}. The total price is {$price} delivered on {$delivery}");	
+
+			$this->email->send();
+
+			$push_notification_message = "{$supplier['name']} has sent you an offer";
+			send_push_notification($push_notification_message);
+		}
+
+
 	}
 
    	public function accept($offer, $request) 
@@ -66,6 +74,7 @@ class Offers_model extends CI_Model {
 		$data = array(
 		   'delivery_date' 	=> $offer['delivery'],
 		   'supplier' 		=> $offer['supplier'],
+		   'price' 			=> $offer['price'],
 		   'status' 		=> 'ordered',
 		);
 		$this->db->where('id', $offer['request_id'])->where('status', 'request_sent');
@@ -75,7 +84,7 @@ class Offers_model extends CI_Model {
 		   'status' 		=> 'ordered',
 		);
 
-		$this->db->where('hash', $offer['hash'])->where('status', 'sent');
+		$this->db->where('hash', $offer['hash'])->where('status', 'accepted');
 		$this->db->update('offers', $data); 
 	}
 

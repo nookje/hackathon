@@ -36,8 +36,9 @@ class Requests extends CI_Controller {
 	{
 		$this->load->model('requests_model', 'requests');		
 
-		$result = $this->requests->sendRequestOffer($id);
-
+		$this->requests->sendRequestOffer($id);
+		$result = $this->requests->get($id);
+		
 		header('Content-Type: application/json');
 		echo json_encode($result);
 	}	
