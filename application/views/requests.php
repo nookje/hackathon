@@ -1,14 +1,7 @@
                 <nav class="navbar navbar-inverse" role="navigation">
                   <div class="navbar-header">
-                    <div class="navbar-brand" href="#">Choose</div>
+                    <div class="navbar-brand" href="#">Orders<span class="navbar-new">3</span></div>
                   </div>
-
-                  <div class="collapse navbar-collapse" id="#navbar-collapse-02">
-                    <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">Orders</a></li>
-                      <li><a href="#">Requests<span class="navbar-unread">1</span></a></li>
-                     </ul>
-                  </div><!-- /.navbar-collapse -->
                 </nav>
 
 
@@ -18,74 +11,73 @@
                     <!-- Past items -->
                     <div class="list-group">
 
-                      <div href="#" class="list-group-item list-group-item-warning">
-                        <span class="item-location">Timisoara</span>
+                      <a href="#" class="list-group-item list-group-item-warning clearfix">
                         <span class="item-user">Gabriel Kovacs</span>
+                        <span class="item-location">Timisoara</span>
 
                         <h4 class="list-group-item-heading">26 May 2014</h4>
                         <p class="list-group-item-text">
                           Microsoft 3000 keyboard
                         </p>
                         <span class="item-status">
-                          Ordered
+                          <span class="btn btn-success">Delivered</span>
                         </span>
 
-                      </div>
+                      </a>
 
+                      <a href="#" class="list-group-item list-group-item-warning clearfix">
+                        <span class="item-user">Marius Talagiu</span>
+                        <span class="item-location">Oradea</span>
 
-                      <div href="#" class="list-group-item list-group-item-warning">
-                        <span class="item-date">26 May 2014</span>
-                        <h4 class="list-group-item-heading"><a href="#">Microsoft 3000 keyboard</a></h4>
-                        <span class="item-user">
-                          Gabriel Kovacs
-                        </span>
+                        <h4 class="list-group-item-heading">05 Jun 2014</h4>
+                        <p class="list-group-item-text">SSD Samsung 840 Pro</p>
                         <span class="item-status">
-                          Ordered
+                          <span class="btn btn-success">Delivered</span>
                         </span>
 
-                      </div>
+                      </a>
 
                     </div>
 
                     <!-- Current items -->
                     <div class="list-group">
-                      <div href="#" class="list-group-item active">
-                        <span class="item-date">30 May 2014</span>
-                        <h4 class="list-group-item-heading"><a href="#">Microsoft 3000 keyboard</a></h4>
-                        <span class="item-user">
-                          Gabriel Kovacs
-                        </span>
-                        <span class="item-status">
-                          Delivering Today
-                        </span>
-                      </div>
+                      <a href="#" class="list-group-item list-group-item-info clearfix">
+                        <span class="item-user">Razvan Smarandeanu</span>
+                        <span class="item-location">Timisoara</span>
 
-                      <div href="#" class="list-group-item active">
-                        <span class="item-date">30 May 2014</span>
-                        <h4 class="list-group-item-heading"><a href="#">Microsoft 3000 keyboard</a></h4>
-                        <span class="item-user">
-                          Gabriel Kovacs
-                        </span>
+                        <h4 class="list-group-item-heading">15 Jun 2014</h4>
+                        <p class="list-group-item-text">Notebook &amp; Pen</p>
                         <span class="item-status">
-                          Delivering Today
+                          <span class="btn btn-primary">Incoming</span>
                         </span>
-                      </div>
+                      </a>
 
                     </div>
 
                     <!-- Future items -->
                     <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-info">
-                        <h4 class="list-group-item-heading">Microsoft 3000 keyboard</h4>
-                        <p class="list-group-item-text">
-                          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-                        </p>
+                      <a href="#" class="list-group-item list-group-item-warning clearfix">
+                        <span class="item-user">Marius Fanu</span>
+                        <span class="item-location">Timisoara</span>
+
+                        <h4 class="list-group-item-heading">30 Jun 2014</h4>
+                        <p class="list-group-item-text">Dell UltraSharp Pro 24"</p>
+                        <span class="item-status">
+                          <span class="btn btn-warning">Ordered</span>
+                        </span>
+
                       </a>
-                      <a href="#" class="list-group-item list-group-item-info">
-                        <h4 class="list-group-item-heading">Microsoft 3000 keyboard</h4>
-                        <p class="list-group-item-text">
-                          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-                        </p>
+
+                      <a href="#" class="list-group-item list-group-item-warning clearfix">
+                        <span class="item-user">Crisitian Sitov</span>
+                        <span class="item-location">Timisoara</span>
+
+                        <h4 class="list-group-item-heading">05 Iul 2014</h4>
+                        <p class="list-group-item-text">Apple Thunderbolt to Gigabit Lan Adapter</p>
+                        <span class="item-status">
+                          <span class="btn btn-warning">Ordered</span>
+                        </span>
+
                       </a>
                     </div>
 

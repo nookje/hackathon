@@ -4804,12 +4804,19 @@ h2 {
   border-radius: 0 0 .5rem .5rem;
   padding: 5rem 0;
 }
+.navbar-brand {
+  position: relative;
+}
 .item-listing {
   padding: 0 3rem;
   max-height: 50rem;
   overflow: auto;
 }
 .item-status {
+  float: right;
+  margin-top: -35px;
+}
+.item-location {
   float: right;
 }
 .list-group-item.active {
