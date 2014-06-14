@@ -29,4 +29,21 @@ class Offers extends CI_Controller {
 		header('Content-Type: application/json');
 		echo json_encode($result);
 	}
+
+	public function accept($hash)
+	{
+		$this->load->model('offers_model', 'offers');		
+		$offer = $this->offers->get($hash);
+
+		$this->load->model('requests_model', 'requests');		
+		$request = $this->requests->get($offer['request_id']);
+
+		if ($request['status'] == 'request_sent' && $offer['status'] == 'sent') {
+			$this->offers->accept($offer, $request);
+		}
+
+		header('Content-Type: application/json');
+		echo json_encode($request);
+	}
+
 }

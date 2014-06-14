@@ -168,7 +168,7 @@ class Requests_model extends CI_Model {
 			$hash = md5($val['name'] . microtime() . rand(1,999999));
 			$data = array(
 			   'request_id' 	=> $id,
-			   'provider' 		=> $val['name'] ,
+			   'supplier' 		=> $val['name'] ,
 			   'status' 		=> 'unopened',
 			   'hash' 			=> $hash,
 			);
@@ -176,6 +176,13 @@ class Requests_model extends CI_Model {
 			$insert_query = str_replace('INSERT INTO','INSERT IGNORE INTO',$insert_query);
 			$this->db->query($insert_query); 
 		}
+
+		$data = array(
+		   'status' 		=> 'request_sent',
+		);
+
+		$this->db->where('id', $id);
+		$this->db->update('requests', $data); 
     }
 
 

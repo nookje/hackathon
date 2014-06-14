@@ -28,25 +28,26 @@ class Offers_model extends CI_Model {
    	public function send($hash) 
 	{
 
-$this->load->library('email');
+		$this->load->library('email');
 
-// $config['protocol'] = 'sendmail';
-// $config['mailpath'] = '/usr/sbin/sendmail';
-// $config['charset'] = 'iso-8859-1';
-// $config['wordwrap'] = TRUE;
+		$config['protocol'] = 'smtp';
+		$config['mailpath'] = '/usr/sbin/sendmail';
+		// $config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = TRUE;
+        $config['smtp_host']           = "localhost";
+        $config['smtp_port']           = "25";
 
-// $this->email->initialize($config);
+		$this->email->initialize($config);
 
+		$this->email->from('your@example.com', 'Your Name');
+		$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
 
-$this->email->from('your@example.com', 'Your Name');
-$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
+		$this->email->subject('Email Test');
+		$this->email->message('Testing the email class.');	
 
-$this->email->subject('Email Test');
-$this->email->message('Testing the email class.');	
+		$this->email->send();
 
-$this->email->send();
-
-echo $this->email->print_debugger();
+		echo $this->email->print_debugger();
 
 
 		$price		= $this->input->get('price', true);
@@ -64,6 +65,25 @@ echo $this->email->print_debugger();
 		);
 
 		$this->db->where('hash', $hash)->where('status', 'opened');
+		$this->db->update('offers', $data); 
+	}
+
+   	public function accept($offer, $request) 
+	{
+
+		$data = array(
+		   'delivery_date' 	=> $offer['delivery'],
+		   'supplier' 		=> $offer['supplier'],
+		   'status' 		=> 'ordered',
+		);
+		$this->db->where('id', $offer['request_id'])->where('status', 'request_sent');
+		$this->db->update('requests', $data); 
+
+		$data = array(
+		   'status' 		=> 'ordered',
+		);
+
+		$this->db->where('hash', $offer['hash'])->where('status', 'sent');
 		$this->db->update('offers', $data); 
 	}
 
