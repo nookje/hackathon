@@ -9,8 +9,17 @@ class Offers_model extends CI_Model {
 
     public function get($hash) 
     {
-		$query = $this->db->get_where('offers', array('hash' => $hash));
-		return $query->row_array();
+
+		$q = "	SELECT *
+				FROM offers
+				JOIN requests ON requests.id = offers.request_id
+				WHERE hash = '{$hash}'
+		";
+
+		$query = $this->db->query($q);
+		
+		$result = $query->row_array();
+		return $result;
     }
  
 
