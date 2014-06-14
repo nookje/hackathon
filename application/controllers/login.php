@@ -4,6 +4,11 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
+
+ 
+
+		send_push_notification('logged in bo$$');
+
 		if (count($_GET)) {
 			$email 		= $this->input->get('email', true);
 			$role 		= $this->input->get('role', true);

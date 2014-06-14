@@ -1,27 +1,26 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-function custom_redirect($url)
+function send_push_notification($notification)
 {
-    header("Location: /{$url}");
-    exit;
-}
 
-function linkize($string) 
-{
-	return strtolower(trim(preg_replace('/[^a-z0-9]+/i', '-', $string), "-"));
-}
 
-function keywordize($string) 
-{
-	return strtolower(preg_replace('/[^a-z0-9\ ,]+/i', ' ', $string));
-}
+exec('
+curl -X POST \
+  -H "X-Parse-Application-Id: IZrrJxhHFSWv7kAvWTAtB5uQ7so2vprbygzr5z2r" \
+  -H "X-Parse-REST-API-Key: JqMMRaB9A1NHaVOHfGSbP9KybfF8Tn7Sx2nwBaQn" \
+  -H "Content-Type: application/json" \
+  -d \'{
+        "channels": [
+          ""
+        ],
+        "data": {
+          "alert": "' . $notification . '",
+          "badge": "Increment",
+          "sound": "cheering.caf",
+          "title": "Mets Score!"
+        }
+      }\' \
+  https://api.parse.com/1/push
+');
 
-function titleize($string) 
-{
-	return trim(preg_replace('/[^a-z0-9]+/i', '-', $string), "-");
-}
-
-function meta_keywordize($string) 
-{
-	return strtolower(trim(preg_replace('/[^a-z0-9]+/i', ',', $string), ","));
 }
