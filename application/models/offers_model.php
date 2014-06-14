@@ -30,15 +30,6 @@ class Offers_model extends CI_Model {
 
 		$this->load->library('email');
 
-		$config['protocol'] = 'smtp';
-		$config['mailpath'] = '/usr/sbin/sendmail';
-		// $config['charset'] = 'iso-8859-1';
-		$config['wordwrap'] = TRUE;
-        $config['smtp_host']           = "localhost";
-        $config['smtp_port']           = "25";
-
-		$this->email->initialize($config);
-
 		$this->email->from('your@example.com', 'Your Name');
 		$this->email->to('razvan.smarandeanu@e-spres-oh.com'); 
 
