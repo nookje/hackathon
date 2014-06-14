@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-wishly",
+  "version": "0.0.1",
+  "authors": [
+    "Allegiant"
+  ],
+  "description": "Customized Wishly Bootstrap",
+  "main": [
+    "./styles.less",
+    "./assets"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap":"3.0.0"
+  }
+}
