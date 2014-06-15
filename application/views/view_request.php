@@ -9,7 +9,8 @@
 
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                      <div id="test"></div>
+
+                      <div class="alert alert-success request-success" tabindex="-1"><b>Well done!</b> Request updated</div>
 
                       <form role="form" method="post" action="/requests/edit/" id="editForm" data-request-id="<?= $request['id'] ?>">
                         <div class="form-group">

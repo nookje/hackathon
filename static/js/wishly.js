@@ -18,7 +18,14 @@ $(function() {
         data: $form.serialize(),
         type: 'POST',
         success: function(data){
-            console.log(data);
+            var $successMsg = $('.request-success');
+            console.log ($successMsg);
+
+            $successMsg.show();
+            $successMsg.focus();
+            setTimeout(function(){
+                $successMsg.fadeOut();
+            }, 2000);
         }
       }).always(function () {
         btn.button('reset')
