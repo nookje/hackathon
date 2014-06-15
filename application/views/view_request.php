@@ -113,12 +113,14 @@
                                 <div class="action-wrapper">
                                   <a href="#" class="btn btn-sm btn-success offer-btn"  data-loading-text="Loading..." data-status="accept" data-hash="<?=$val['hash']?>">Accept</a>
                                   <a href="#" class="btn btn-sm btn-danger offer-btn"  data-loading-text="Loading..." data-status="reject" data-hash="<?=$val['hash']?>">Reject</a>
+                                  <span class="btn btn-sm new-status"></span>
                                 </div>
-                                <button class="btn btn-sm new-status"></button>
                                 <?php } elseif ($val['status'] == 'unopened') { ?>
-                                  <button class="btn btn-sm btn-default"><?= ucfirst($val['status']) ?></button>
+                                  <span class="btn btn-sm btn-default"><?= ucfirst($val['status']) ?></span>
+                                <?php } elseif ($val['status'] == 'opened') { ?>
+                                  <span class="btn btn-sm btn-info"><?= ucfirst($val['status']) ?></span>
                                 <?php } else { ?>
-                                  <button class="btn btn-sm btn-success"><?= ucfirst($val['status']) ?></button>
+                                  <span class="btn btn-sm btn-success"><?= ucfirst($val['status']) ?></span>
                                 <?php } ?>
                               </td>
                             </tr>

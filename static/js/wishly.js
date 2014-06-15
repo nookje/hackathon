@@ -122,12 +122,14 @@ $(function() {
         data: '',
         type: 'POST',
         success: function(data){
-            $('.action-wrapper').hide();
+            var parentContainer = btn.closest('.action-wrapper');
+
+            $('.offer-btn', parentContainer).hide();
 
             if (data.status == 'ordered') {
-              $('.new-status').addClass('btn-success').text($.ucfirst(data.status)).show();
+              $('.new-status', parentContainer).addClass('btn-success').text($.ucfirst(data.status)).show();
             } else {
-              $('.new-status').addClass('btn-danger').text($.ucfirst(data.status)).show();
+              $('.new-status', parentContainer).addClass('btn-danger').text($.ucfirst(data.status)).show();
             }
         }
       }).always(function () {
