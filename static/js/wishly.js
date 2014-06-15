@@ -55,10 +55,30 @@ $(function() {
 
     });
 
+    // Send Offer
+    $('.send-offer').click(function ( event ) {
+      // Stop form from submitting normally
+      event.preventDefault();
+
+      var btn = $(this),
+          requestId = $( "#editForm" ).attr("data-request-id");
+
+      btn.button('loading');
+      $.ajax({
+        url: '/requests/requestOffer/'+requestId,
+        data: '',
+        type: 'POST',
+        success: function(data){
+            $('#newOffersContainer').html(data);
+        }
+      }).always(function () {
+        btn.button('reset')
+      });
+
+    });
+
     // Update Offer Status
     $('.offer-btn').click(function ( event ) {
-      console.log('Button clicked')
-
       // Stop form from submitting normally
       event.preventDefault();
 

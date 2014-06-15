@@ -71,7 +71,7 @@
                             Edit Request
                           </button>
 
-                          <button class="btn btn-primary btn-wide">
+                          <button class="btn btn-primary btn-wide send-offer">
                             Send Offer Request
                           </button>
                         </div>
@@ -80,6 +80,7 @@
                     </div>
                   </div>
 
+                  <div id="newOffersContainer"></div>
                   <?php if ($offers) {?>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1">
