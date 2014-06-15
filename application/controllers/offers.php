@@ -38,9 +38,11 @@ class Offers extends CI_Controller {
 		$this->load->model('requests_model', 'requests');		
 		$request = $this->requests->get($offer['request_id']);
 
-		if ($request['status'] == 'request_sent' && $offer['status'] == 'accepted') {
+		if ($request['status'] == 'request_sent' && $offer['offer_status'] == 'accepted') {
+
 			$this->offers->accept($offer, $request);
 		}
+		$request = $this->requests->get($offer['request_id']);
 
 		header('Content-Type: application/json');
 		echo json_encode($request);

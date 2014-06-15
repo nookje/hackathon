@@ -10,7 +10,7 @@ class Offers_model extends CI_Model {
     public function get($hash) 
     {
 
-		$q = "	SELECT *, offers.supplier as offer_supplier
+		$q = "	SELECT *, offers.supplier as offer_supplier, offers.status as offer_status 
 				FROM offers
 				JOIN requests ON requests.id = offers.request_id
 				WHERE hash = '{$hash}'
@@ -39,10 +39,10 @@ class Offers_model extends CI_Model {
 		$offer = $this->get($hash);
 
 		$this->load->model('suppliers_model', 'suppliers');		
-		$supplier = $this->suppliers->getSupplierByName($offer['supplier']);
+		$supplier = $this->suppliers->getSupplierByName($offer['offer_supplier']);
 
 		$price		= $this->input->post('price', true);
-		$delivery 	= $this->input->post('delivery', true);
+		$delivery 	= $this->input->post('delivery_date', true);
 		$status 	= $this->input->post('status', true);
 
 		if (!$price || !$delivery || !$status) {
