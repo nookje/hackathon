@@ -13,7 +13,7 @@
 
 
                       <!-- Past items -->
-                      <div class="list-group">
+                      <div class="list-group" style="margin-bottom: 5px;">
 
                         <a href="/index.php/frontend/requests/view/<?= $val['id'] ?>" class="list-group-item list-group-item-<?php if ($val['status'] == 'request') { ?>info<?php } else { ?>warning<?php } ?> clearfix">
                           <span class="item-user"><?= substr($val['requester'], 0, strpos($val['requester'], '@')); ?></span>
@@ -24,7 +24,7 @@
                             <?= $val['description'] ?>
                           </p>
                           <span class="item-status">
-                            <span class="btn btn-<?php if ($val['status'] == 'delivered') { ?>success<?php } elseif ($val['status'] == 'canceled') { ?>danger<?php } else { ?>warning<?php } ?>"><?= $val['status'] ?></span>
+                            <span class="btn btn-<?php if ($val['status'] == 'delivered') { ?>success<?php } elseif ($val['status'] == 'canceled') { ?>danger<?php } elseif ($val['status'] == 'ordered') { ?>info<?php } else { ?>warning<?php } ?>"><?= $val['status'] ?></span>
                           </span>
 
                         </a>

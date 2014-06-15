@@ -35,8 +35,10 @@
                         <div class="form-group">
                           <label for="location">Location</label>
                           <select name='location' data-select-type='info' class="select-block">
-                            <option>Timisoara</option>
-                            <option>Oradea</option>
+                            <option>[e-spres-oh]</option>
+                            <option>ctrl-d</option>
+                            <option>x3</option>
+                            <option>MyGov</option>
                           </select>
                         </div>
                         <div class="form-group">
