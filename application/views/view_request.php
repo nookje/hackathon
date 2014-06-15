@@ -118,7 +118,7 @@
                                 <?php } elseif ($val['status'] == 'unopened') { ?>
                                   <button class="btn btn-sm btn-default"><?= ucfirst($val['status']) ?></button>
                                 <?php } else { ?>
-                                  <button class="btn btn-sm btn-info"><?= ucfirst($val['status']) ?></button>
+                                  <button class="btn btn-sm btn-success"><?= ucfirst($val['status']) ?></button>
                                 <?php } ?>
                               </td>
                             </tr>
