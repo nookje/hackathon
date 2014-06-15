@@ -37,10 +37,7 @@
 
                         <div class="sidebar-menu">
                             <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/requests">Requests</a>
-                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts">Visual Breakdowns</a>
-                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts/top_locations">Top locations</a>
-                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts/total_per_month">Expenditures by month</a>
-                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts/top">Expenditures by user</a>
+                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts/top_locations">Visual Breakdowns</a>
                         </div>
                     </div>
                 </div>
