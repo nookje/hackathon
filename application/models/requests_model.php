@@ -72,7 +72,7 @@ class Requests_model extends CI_Model {
 					WHERE delivery_date {$direction}= '{$reference}' 
 					AND id != {$id}
 					{$condition}
-					ORDER BY delivery_date {$order}
+					ORDER BY delivery_date {$order}, id ASC
 					LIMIT 3
 			";
 
@@ -86,7 +86,7 @@ class Requests_model extends CI_Model {
 				WHERE delivery_date < now()
 				{$condition}
 				ORDER BY delivery_date DESC
-				LIMIT 3) as T ORDER BY T.delivery_date ASC
+				LIMIT 3) as T ORDER BY T.delivery_date ASC, id ASC
 			";
 
 			$query = $this->db->query($q);
@@ -96,7 +96,7 @@ class Requests_model extends CI_Model {
 				FROM requests
 				WHERE delivery_date >= now()
 				{$condition}
-				ORDER BY delivery_date ASC
+				ORDER BY delivery_date ASC, id ASC
 				LIMIT 3
 			";
 
