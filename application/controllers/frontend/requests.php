@@ -22,4 +22,13 @@ class Requests extends CI_Controller {
         $this->load->view('main', $data);
     }    
 
+
+    public function add()
+    {
+        $this->load->model('frontendrequests_model', 'frontendrequests');
+        $data['body_model']     = $this->frontendrequests;
+        $data['pass_along']['function'] = __FUNCTION__;
+
+        $this->load->view('main', $data);
+    } 
 }

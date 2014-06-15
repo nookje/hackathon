@@ -43,6 +43,10 @@ class Frontendrequests_model extends CI_Model {
         $this->load->view('view_request', $data);
     }
 
+    function add($params)
+    {
 
+        $this->load->view('add_request');
+    }
 
 }
