@@ -10,9 +10,9 @@
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1">
 
-                      <div class="alert alert-success request-success" tabindex="-1"><b>Well done!</b> Request updated</div>
+                      <div class="alert alert-success request-success" tabindex="-1"><b>Well done!</b> Request added</div>
 
-                      <form role="form" method="post" action="/requests/edit/" id="editForm" >
+                      <form role="form" method="post" action="/requests/add" id="addForm" >
 
                         <div class="form-group">
                           <label for="location">Location</label>
@@ -26,7 +26,7 @@
                         <div class="form-group">
                           <label for="providerTypes">Supplier Type</label>
                           <select name='supplier_type' data-select-type='info' class="select-block mbl">
-                            <option value="it&c">IT&amp;C</option>
+                            <option value="it&amp;c">IT&amp;C</option>
                             <option value="food">Food</option>
                             <option value="service">Service</option>
                           </select>
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group">
-                          <button id="edit-request-btn" data-loading-text="Loading..." class="btn btn-primary btn-wide">
+                          <button id="add-request-btn" data-loading-text="Loading..." class="btn btn-primary btn-wide">
                             Send Request
                           </button>
                         </div>
@@ -50,4 +50,4 @@
                     </div>
                   </div>
 
-                  
+

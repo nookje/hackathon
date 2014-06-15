@@ -42,7 +42,7 @@
                         <div class="form-group">
                           <label for="providerTypes">Supplier Type</label>
                           <select name='supplier_type' data-select-type='info' class="select-block mbl">
-                            <option value="it&c"<? echo $request['supplier_type'] == 'it&c' ? ' selected' : ''?>>IT&amp;C</option>
+                            <option value="it&amp;c"<? echo $request['supplier_type'] == 'it&c' ? ' selected' : ''?>>IT&amp;C</option>
                             <option value="food"<? echo $request['supplier_type'] == 'food' ? ' selected' : ''?>>Food</option>
                             <option value="service"<? echo $request['supplier_type'] == 'service' ? ' selected' : ''?>>Service</option>
                           </select>
