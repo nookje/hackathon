@@ -1,21 +1,26 @@
 
-<div style="width: 500px; background-color:#fff; padding: 20px; ">
-
 <?php if (isset($top)) { ?>
 
 		<nav role="navigation" class="navbar navbar-inverse navbar-embossed">
           <div class="navbar-header">
-            <button data-target="#navbar-collapse-06" data-toggle="collapse" class="navbar-toggle" type="button">
-            </button>
-            <a href="javascript:;" class="navbar-brand">Top Breakdown</a>
+            <div class="navbar-brand">Visuals by</div>
           </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">About Us</a></li>
+           </ul>
           <div id="navbar-collapse-06" class="collapse navbar-collapse">
             <p class="navbar-text"><?= $type ?></p>
           </div>
         </nav>
-	<?php
+        <div class="inner-content base-column">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
 
-		foreach ($top as $val) { ?>
+    <?php
+
+
+        foreach ($top as $val) { ?>
 
 			<div>
 				<div style="float: left; width: 300px;"><?= ($type == 'per month') ? date_format(date_create($val['name']), 'F Y') : ($val['name']); ?></div>
@@ -33,8 +38,10 @@
 
 	<?php } ?>
 
+            </div>
+            </div>
+        </div>
+
 
 
 <?php } ?>
-
-</div>
