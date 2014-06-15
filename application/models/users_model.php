@@ -77,5 +77,18 @@ class Users_model extends CI_Model {
 		return $result;
     }
 
+    function getTopSuppliers()
+    {
+		$q = "	SELECT supplier AS name, sum(price) AS total, count(1) AS cnt 
+				FROM `requests` 
+				WHERE price != 0 
+				GROUP BY supplier ORDER BY sum(price) DESC LIMIT 5
+		";
+    
+		$query = $this->db->query($q);
+		
+		$result = $query->result_array();
+		return $result;
+    }
 
 }

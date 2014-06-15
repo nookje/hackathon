@@ -9,6 +9,7 @@
             <li<?= ($type == 'location') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/top_locations">Location</a></li>
             <li<?= ($type == 'user') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/top">User</a></li>
             <li<?= ($type == 'month') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/total_per_month">Month</a></li>
+            <li<?= ($type == 'suppliers') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/top_suppliers">Supplier</a></li>
            </ul>
         </nav>
         <div class="inner-content base-column">

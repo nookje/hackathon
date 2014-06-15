@@ -41,4 +41,13 @@ class Charts extends CI_Controller {
 		$this->load->view('main', $data);
 	}
 
+	public function top_suppliers()
+	{
+		$this->load->model('frontendcharts_model', 'frontendcharts');
+		$data['body_model'] 	= $this->frontendcharts;		
+		$data['pass_along']['function'] = __FUNCTION__;	
+
+		$this->load->view('main', $data);
+	}
+
 }

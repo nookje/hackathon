@@ -57,5 +57,17 @@ class Frontendcharts_model extends CI_Model {
         $this->load->view('charts', $data);
     }
 
+    function top_suppliers($params = false)
+    {
+        $this->load->model('users_model', 'users');
+
+        $data['top'] = $this->users->getTopSuppliers();
+        $data['max'] = $data['top']['0']['total'];
+
+        $data['type'] = 'suppliers';
+
+        $this->load->view('charts', $data);
+    }
+
 
 }
