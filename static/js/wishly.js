@@ -1,5 +1,27 @@
 $(function() {
-    // Attach a submit handler to the form
+    $.ucfirst = function(str) {
+
+        var text = str;
+
+
+        var parts = text.split(' '),
+            len = parts.length,
+            i, words = [];
+        for (i = 0; i < len; i++) {
+            var part = parts[i];
+            var first = part[0].toUpperCase();
+            var rest = part.substring(1, part.length);
+            var word = first + rest;
+            words.push(word);
+
+        }
+
+        return words.join(' ');
+    };
+
+
+
+    // Edit Request Form
     $( "#editForm" ).submit(function( event ) {
 
       // Stop form from submitting normally
@@ -33,19 +55,29 @@ $(function() {
 
     });
 
+    // Update Offer Status
     $('.offer-btn').click(function ( event ) {
       console.log('Button clicked')
 
       // Stop form from submitting normally
       event.preventDefault();
 
-      var btn = $(this)
+      var btn = $(this);
 
       btn.button('loading');
       $.ajax({
         url: '/offers/'+btn.attr('data-status')+'/'+btn.attr('data-hash'),
         data: '',
-        type: 'POST'
+        type: 'POST',
+        success: function(data){
+            $('.action-wrapper').hide();
+
+            if (data.status == 'ordered') {
+              $('.new-status').addClass('btn-success').text($.ucfirst(data.status)).show();
+            } else {
+              $('.new-status').addClass('btn-danger').text($.ucfirst(data.status)).show();
+            }
+        }
       }).always(function () {
         btn.button('reset')
       });
@@ -53,6 +85,7 @@ $(function() {
     });
 
 
+    // Form datepicker
     $(".date-picker").datepicker({ dateFormat: 'yy-mm-dd' });
 
     $(".date-picker").on("change", function () {
