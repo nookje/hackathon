@@ -1,6 +1,6 @@
                 <nav class="navbar navbar-inverse" role="navigation">
                   <div class="navbar-header">
-                    <div class="navbar-brand" href="#">Orders<span class="navbar-new">3</span></div>
+                    <div class="navbar-brand" href="#">Orders<span class="navbar-new"><?= $count?></span></div>
                   </div>
                 </nav>
 
@@ -19,7 +19,7 @@
                           <span class="item-user"><?= substr($val['requester'], 0, strpos($val['requester'], '@')); ?></span>
                           <span class="item-location"><?= $val['location'] ?></span>
 
-                          <h4 class="list-group-item-heading"><?= substr($val['delivery_date'],0,10); ?></h4>
+                          <h4 class="list-group-item-heading"><?= date_format(date_create($val['delivery_date']), 'j F Y') ?></h4>
                           <p class="list-group-item-text">
                             <?= $val['description'] ?>
                           </p>

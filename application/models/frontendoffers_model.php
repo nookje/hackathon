@@ -30,6 +30,7 @@ class Frontendoffers_model extends CI_Model {
         $request = $this->requests->get($offer['request_id']);
 
         $data['request'] = $request;
+        $data['offer'] = $offer;
 
         $this->load->view('show_offers', $data);
     }

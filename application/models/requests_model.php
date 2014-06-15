@@ -7,6 +7,23 @@ class Requests_model extends CI_Model {
         parent::__construct();
     }    
     
+
+
+    function newRequests()
+    {
+    
+		$q = "	SELECT * 
+			FROM requests
+			WHERE status = 'request'
+		";
+
+		$query = $this->db->query($q);
+		
+		$result = $query->result_array();
+
+		return $result;
+    }
+
     function loadRequests()
     {
     

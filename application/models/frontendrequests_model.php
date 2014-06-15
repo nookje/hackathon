@@ -18,6 +18,10 @@ class Frontendrequests_model extends CI_Model {
 			$requests = $this->requests->loadRequests();
 
             $data['requests'] = $requests;
+
+            $data['count'] = count($this->requests->newRequests());
+
+
             $this->load->view('requests', $data);
         }
     }
