@@ -7,15 +7,21 @@ class Frontendoffers_model extends CI_Model {
         parent::__construct();
     }
 
-    function display()
+
+    function display($params)
     {
-        $data       = array();
-        $this->load->view('offers', $data);
+        if (isset($params['function']) && method_exists(__CLASS__, $params['function'])) {
+            return $this->$params['function']($params);
+        } else {
+            $data       = array();
+
+            $this->load->view('show_offers', $data);
+        }
     }
 
     function show($params)
     {
-
+        $data = array();
         $this->load->view('show_offers', $data);
     }
 
