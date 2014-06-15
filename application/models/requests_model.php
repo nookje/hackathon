@@ -116,20 +116,22 @@ class Requests_model extends CI_Model {
     		return;
     	}
 
-		$description	= $this->input->get('description', true);
-		$link 			= $this->input->get('link', true);
-		$urgency 		= $this->input->get('urgency', true);
+		$description	= $this->input->post('description', true);
+		$link 			= $this->input->post('link', true);
+		$location 		= $this->input->post('location', true);
+		$supplier_type 	= $this->input->post('supplier_type', true);
 
 		$date = date('Y-m-d H:i:s');
 
 		$data = array(
 		   'description' 	=> $description,
 		   'link' 			=> $link ,
-		   'urgency' 		=> $urgency,
+		   'location' 		=> $location,
 		   'requester' 		=> $this->authorization->session_item('email'),
 		   'status' 		=> 'request',
 		   'date'			=> $date,
 		   'delivery_date'	=> $date,
+		   'supplier_type'	=> $supplier_type,
 		);
 
 		$this->db->insert('requests', $data); 
