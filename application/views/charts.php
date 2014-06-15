@@ -6,12 +6,10 @@
             <div class="navbar-brand">Visuals by</div>
           </div>
           <ul class="nav navbar-nav">
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">About Us</a></li>
+            <li<?= ($type == 'location') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/top_locations">Location</a></li>
+            <li<?= ($type == 'user') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/top">User</a></li>
+            <li<?= ($type == 'month') ? ' class="active"' : ''; ?>><a href="/index.php/frontend/charts/total_per_month">Month</a></li>
            </ul>
-          <div id="navbar-collapse-06" class="collapse navbar-collapse">
-            <p class="navbar-text"><?= $type ?></p>
-          </div>
         </nav>
         <div class="inner-content base-column">
           <div class="row">
@@ -23,7 +21,7 @@
         foreach ($top as $val) { ?>
 
 			<div>
-				<div style="float: left; width: 300px;"><?= ($type == 'per month') ? date_format(date_create($val['name']), 'F Y') : ($val['name']); ?></div>
+				<div style="float: left; width: 300px;"><?= ($type == 'month') ? date_format(date_create($val['name']), 'F Y') : ($val['name']); ?></div>
 				<div style="float: right; width: 100px; text-align: right;"><?= $val['cnt'] ?> requests</div>
 				<div style="clear: both"></div>
 				<div class="progress">
