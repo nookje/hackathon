@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="form-group">
-                          <button class="btn btn-primary btn-wide">
+                          <button id="edit-request-btn" data-loading-text="Loading..." class="btn btn-primary btn-wide">
                             Edit Request
                           </button>
 
@@ -107,8 +107,8 @@
                               </td>
                               <td>
                                 <?php if ($val['status'] == 'accepted') { ?>
-                                <a href="#" class="btn btn-sm btn-success">Accept</a>
-                                <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                <a href="#" class="btn btn-sm btn-success offer-btn"  data-loading-text="Loading..." data-status="accept" data-hash="<?=$val['hash']?>">Accept</a>
+                                <a href="#" class="btn btn-sm btn-danger offer-btn"  data-loading-text="Loading..." data-status="reject" data-hash="<?=$val['hash']?>">Reject</a>
                                 <?php } elseif ($val['status'] == 'unopened') { ?>
                                   <button class="btn btn-default"><?= $val['status'] ?></button>
                                 <?php } else { ?>

@@ -10,7 +10,9 @@ $(function() {
           datastring = $form.serialize(),
           itemId = $form.attr("data-request-id");
           url = $form.attr( "action" )+itemId;
+          btn = $('#edit-request-btn');
 
+      btn.button('loading');
       $.ajax({
         url: url,
         data: $form.serialize(),
@@ -18,6 +20,27 @@ $(function() {
         success: function(data){
             console.log(data);
         }
+      }).always(function () {
+        btn.button('reset')
+      });
+
+    });
+
+    $('.offer-btn').click(function ( event ) {
+      console.log('Button clicked')
+
+      // Stop form from submitting normally
+      event.preventDefault();
+
+      var btn = $(this)
+
+      btn.button('loading');
+      $.ajax({
+        url: '/offers/'+btn.attr('data-status')+'/'+btn.attr('data-hash'),
+        data: '',
+        type: 'POST'
+      }).always(function () {
+        btn.button('reset')
       });
 
     });
