@@ -31,8 +31,8 @@
                 <div class="col-md-4">
                     <div class="base-column sidebar">
                         <div class="branding clearfix">
-                            <span class="glyphicon glyphicon-list-alt" style="float: left;"></span>
-                            <h3>Wishly</h3>
+                            <img src="/static/images/icons/png/Clipboard.png" alt="" width="64" height="64" class="app-logo">
+                            <h3 class="app-title">Wishly</h3>
                         </div>
 
                         <div class="sidebar-menu">
