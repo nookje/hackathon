@@ -41,6 +41,38 @@ $(function() {
         type: 'POST',
         success: function(data){
             var $successMsg = $('.request-success');
+
+            $successMsg.show();
+            $successMsg.focus();
+            setTimeout(function(){
+                $successMsg.fadeOut();
+            }, 2000);
+        }
+      }).always(function () {
+        btn.button('reset')
+      });
+
+    });
+
+    // Send Offer Form
+    $( "#sendOfferForm" ).submit(function( event ) {
+
+      // Stop form from submitting normally
+      event.preventDefault();
+
+      // Get some values from elements on the page:
+      var $form = $( this ),
+          datastring = $form.serialize(),
+          url = $form.attr( "action" );
+          btn = $('#send-offer-btn');
+
+      btn.button('loading');
+      $.ajax({
+        url: url,
+        data: $form.serialize(),
+        type: 'POST',
+        success: function(data){
+            var $successMsg = $('.request-success');
             console.log ($successMsg);
 
             $successMsg.show();
