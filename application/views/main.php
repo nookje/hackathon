@@ -11,6 +11,8 @@
     <!-- Loading Flat UI -->
     <link href="/static/css/wishly.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
     <link rel="shortcut icon" href="/static/images/favicon.ico">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -62,7 +64,7 @@
 
     <!-- Load JS here for greater good =============================-->
     <script src="/static/js/jquery-1.10.2.min.js"></script>
-    <script src="/static/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="/static/js/jquery.ui.touch-punch.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/bootstrap-select.js"></script>

@@ -52,7 +52,13 @@
                         </div>
                         <div class="form-group">
                           <label for="deliveryDate">Delivery Date</label>
-                          <input type="text" class="form-control" id="deliveryDate" name="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>">
+                          <!-- <input type="text" class="form-control" id="deliveryDate" name="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>"> -->
+                          <div class="controls">
+                              <div class="input-group">
+                                  <label for="deliveryDate" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span></label>
+                                  <input type="text" class="date-picker form-control" id="deliveryDate" name="deliveryDate" placeholder="Delivery Date" value="<?= $request['delivery_date'] ?>"/>
+                              </div>
+                          </div>
                         </div>
                         <div class="form-group">
                           <label for="link">Link</label>
