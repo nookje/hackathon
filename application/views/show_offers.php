@@ -9,7 +9,7 @@
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                       <h4>Welcome <?= $offer['offer_supplier'] ?></h4>
-                      <p>Please fill in bellow you offer for <br><b><?= $request['description'] ?></b><br>Thank You!</p>
+                      <p>Please fill in bellow you offer for <br><b><?= $request['link'] ? '<a href="'.$request['link'].'">'.$request['description']."</a>" : $request['description'] ?></b><br>Thank You!</p>
 
                       <form role="form" method="post" action="/offers/respond/<?= $offer['hash'] ?>" id="sendOfferForm">
                         <div class="alert alert-success request-success" tabindex="-1"><b>Well done!</b> Offer sent.</div>
@@ -27,10 +27,6 @@
                                   <input type="text" class="date-picker form-control" id="deliveryDate" name="delivery_date" placeholder="Delivery Date" value=""/>
                               </div>
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="link">Link</label>
-                          <input type="text" class="form-control" id="link" name="link" placeholder="Link to product" value=""/>
                         </div>
                         <div class="form-group">
                           <button id="send-offer-btn" data-loading-text="Loading..." class="btn btn-primary btn-wide">
