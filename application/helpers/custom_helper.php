@@ -6,12 +6,12 @@ function send_push_notification($notification)
 
 exec('
 curl -X POST \
-  -H "X-Parse-Application-Id: IZrrJxhHFSWv7kAvWTAtB5uQ7so2vprbygzr5z2r" \
-  -H "X-Parse-REST-API-Key: JqMMRaB9A1NHaVOHfGSbP9KybfF8Tn7Sx2nwBaQn" \
+  -H "X-Parse-Application-Id: CpUSe8X4hCFPRfUnpHdPSVlmNUWKp0JVLtv7sMRX" \
+  -H "X-Parse-REST-API-Key: BBPu4xX8ukaBIfbN15GF0e5NFbdW2df0QchPYmRk" \
   -H "Content-Type: application/json" \
   -d \'{
         "channels": [
-          ""
+          "test"
         ],
         "data": {
           "alert": "' . $notification . '",

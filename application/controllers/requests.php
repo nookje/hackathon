@@ -37,9 +37,14 @@ class Requests extends CI_Controller {
 		$this->load->model('requests_model', 'requests');		
 
 		$this->requests->sendRequestOffer($id);
-		$result = $this->requests->get($id);
+
+
+		$this->load->model('offers_model', 'offers');		
+
+
+		$data['offers'] = $this->offers->getOffersByRequestId($id);
 		
-		header('Content-Type: application/json');
-		echo json_encode($result);
+
+        $this->load->view('view_offers', $data);
 	}	
 }
