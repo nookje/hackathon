@@ -22,6 +22,15 @@ class Frontendoffers_model extends CI_Model {
     function show($params)
     {
         $data = array();
+
+        $this->load->model('offers_model', 'offers');       
+        $offer = $this->offers->get($params['hash']);
+
+        $this->load->model('requests_model', 'requests');       
+        $request = $this->requests->get($offer['request_id']);
+
+        $data['request'] = $request;
+
         $this->load->view('show_offers', $data);
     }
 
