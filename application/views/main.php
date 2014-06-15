@@ -36,6 +36,7 @@
                         </div>
 
                         <div class="sidebar-menu">
+                            <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/requests/add">Add Request</a>
                             <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/requests">Requests</a>
                             <a type="button" class="btn btn-primary btn-hg btn-block" href="/index.php/frontend/charts/top_locations">Visual Breakdowns</a>
                         </div>
