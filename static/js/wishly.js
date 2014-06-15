@@ -19,7 +19,7 @@ $(function() {
         return words.join(' ');
     };
 
-    // Edit Request Form
+    // Add Request Form
     $( "#addForm" ).submit(function( event ) {
 
       // Stop form from submitting normally
