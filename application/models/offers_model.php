@@ -10,7 +10,7 @@ class Offers_model extends CI_Model {
     public function get($hash) 
     {
 
-		$q = "	SELECT *
+		$q = "	SELECT *, offers.supplier as offer_supplier
 				FROM offers
 				JOIN requests ON requests.id = offers.request_id
 				WHERE hash = '{$hash}'

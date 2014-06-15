@@ -211,7 +211,7 @@ class Requests_model extends CI_Model {
 			$this->email->to($val['email']); 
 
 			$this->email->subject("{$name} has sent you an offer request");
-			$this->email->message("Click the link bellow to respond to the request: {$this->config->item('complete_base_url')}/offers/show/{$hash}");	
+			$this->email->message("Click the link bellow to respond to the request: {$this->config->item('complete_base_url')}/frontend/offers/show/{$hash}");	
 
 			$this->email->send();
 		}

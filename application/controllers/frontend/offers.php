@@ -19,6 +19,10 @@ class Offers extends CI_Controller {
         $data['pass_along']['function'] = __FUNCTION__;
         $data['pass_along']['hash'] = $hash;
 
+        $this->load->model('offers_model', 'offers');       
+
+        $this->offers->markOpened($hash);
+
         $this->load->view('main', $data);
     }
 
