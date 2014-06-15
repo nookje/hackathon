@@ -10,7 +10,7 @@ class Offers_model extends CI_Model {
     public function get($hash) 
     {
 
-		$q = "	SELECT *, offers.supplier as offer_supplier, offers.status as offer_status 
+		$q = "	SELECT *, offers.supplier as offer_supplier, offers.status as offer_status , offers.price as offer_price
 				FROM offers
 				JOIN requests ON requests.id = offers.request_id
 				WHERE hash = '{$hash}'
@@ -83,7 +83,7 @@ class Offers_model extends CI_Model {
 		$data = array(
 		   'delivery_date' 	=> $offer['delivery'],
 		   'supplier' 		=> $offer['supplier'],
-		   'price' 			=> $offer['price'],
+		   'price' 			=> $offer['offer_price'],
 		   'status' 		=> 'ordered',
 		);
 		$this->db->where('id', $offer['request_id'])->where('status', 'request_sent');
