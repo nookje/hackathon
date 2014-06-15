@@ -143,12 +143,11 @@ class Requests_model extends CI_Model {
 		   'link' 			=> $link ,
 		   'urgency' 		=> $urgency,
 		   'supplier'		=> $supplier,
-		   'delivery_date'	=> $delivery_date,
+		   'delivery_date'	=> $delivery_date . ' 12:00:00',
 		   'status' 		=> $status,
 		   'supplier_type'	=> $supplier_type,
 		   'location'		=> $location,
 		);
-
 		$this->db->where('id', $id);
 		$this->db->update('requests', $data); 
     }
