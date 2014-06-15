@@ -82,7 +82,7 @@ class Offers_model extends CI_Model {
 
 		$data = array(
 		   'delivery_date' 	=> $offer['delivery'],
-		   'supplier' 		=> $offer['supplier'],
+		   'supplier' 		=> $offer['offer_supplier'],
 		   'price' 			=> $offer['offer_price'],
 		   'status' 		=> 'ordered',
 		);
