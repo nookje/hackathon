@@ -41,9 +41,9 @@ class Offers_model extends CI_Model {
 		$this->load->model('suppliers_model', 'suppliers');		
 		$supplier = $this->suppliers->getSupplierByName($offer['supplier']);
 
-		$price		= $this->input->get('price', true);
-		$delivery 	= $this->input->get('delivery', true);
-		$status 	= $this->input->get('status', true);
+		$price		= $this->input->post('price', true);
+		$delivery 	= $this->input->post('delivery', true);
+		$status 	= $this->input->post('status', true);
 
 		if (!$price || !$delivery || !$status) {
 			return;
